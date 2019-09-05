@@ -1,0 +1,68 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+blockquote {
+  position: absolute;
+  width: 50%;
+}
+
+h1 {
+  margin: 0;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  padding: 0 2rem;
+  height: 15vh;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.quote {
+  font-family: Caveat;
+  font-size: 2em;
+  margin: 0;
+}
+
+.quote-group {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 50vh;
+  position: relative;
+}
+
+.quote-group::before {
+  background-image: linear-gradient(gold, coral);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.quote-group:hover::before {
+  opacity: .85;
+}
+
+.right {
+  right: 0;
+  text-align: right;
+}
